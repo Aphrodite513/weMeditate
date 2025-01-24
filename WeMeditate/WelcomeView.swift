@@ -44,7 +44,7 @@ struct WelcomeView: View {
                         .padding(.top, 0)
                     
                     NavigationLink(destination: MeditationSetupView()) {
-                        Text("Start Your Journey")
+                        Text("Start My Journey")
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.black)
                             .padding(.vertical, 20)
