@@ -16,6 +16,13 @@
 		0306BD1E2D42E30C00D835DE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0306BD1D2D42E30C00D835DE /* SDWebImageSwiftUI */; };
 		0306BD202D42E69800D835DE /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0306BD1F2D42E69800D835DE /* background.png */; };
 		0306BD222D42EF0300D835DE /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0306BD212D42EF0300D835DE /* icon.jpg */; };
+		AE1E94C62D4422ED004D40DE /* VideoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1E94C52D4422ED004D40DE /* VideoListView.swift */; };
+		AE1E94CE2D444314004D40DE /* PureMusicSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1E94C92D444314004D40DE /* PureMusicSelectionView.swift */; };
+		AE1E94CF2D444314004D40DE /* ExitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1E94CA2D444314004D40DE /* ExitView.swift */; };
+		AE1E94D02D444314004D40DE /* VideoChoicePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1E94CB2D444314004D40DE /* VideoChoicePage.swift */; };
+		AE1E94D12D444314004D40DE /* MeditationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1E94CC2D444314004D40DE /* MeditationPage.swift */; };
+		AE5093782D457CC00084AEC0 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE5093772D457CC00084AEC0 /* YouTubePlayerKit */; };
+		AE50937C2D45A5D50084AEC0 /* BreathworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50937B2D45A5D50084AEC0 /* BreathworkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,12 @@
 		0306BD182D42BDC600D835DE /* MeditationSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSessionView.swift; sourceTree = "<group>"; };
 		0306BD1F2D42E69800D835DE /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Assets.xcassets/background.png; sourceTree = "<group>"; };
 		0306BD212D42EF0300D835DE /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = icon.jpg; path = Assets.xcassets/icon.jpg; sourceTree = "<group>"; };
+		AE1E94C52D4422ED004D40DE /* VideoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListView.swift; sourceTree = "<group>"; };
+		AE1E94C92D444314004D40DE /* PureMusicSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PureMusicSelectionView.swift; sourceTree = "<group>"; };
+		AE1E94CA2D444314004D40DE /* ExitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitView.swift; sourceTree = "<group>"; };
+		AE1E94CB2D444314004D40DE /* VideoChoicePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoChoicePage.swift; sourceTree = "<group>"; };
+		AE1E94CC2D444314004D40DE /* MeditationPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationPage.swift; sourceTree = "<group>"; };
+		AE50937B2D45A5D50084AEC0 /* BreathworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathworkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5093782D457CC00084AEC0 /* YouTubePlayerKit in Frameworks */,
 				0306BD1E2D42E30C00D835DE /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +78,13 @@
 				0306BD142D42BD8400D835DE /* WelcomeView.swift */,
 				0306BD122D42BD1400D835DE /* MeditationApp.swift */,
 				0306BD162D42BDB700D835DE /* MeditationSetupView.swift */,
+				AE1E94CA2D444314004D40DE /* ExitView.swift */,
+				AE1E94CC2D444314004D40DE /* MeditationPage.swift */,
+				AE1E94C92D444314004D40DE /* PureMusicSelectionView.swift */,
+				AE1E94CB2D444314004D40DE /* VideoChoicePage.swift */,
 				0306BD182D42BDC600D835DE /* MeditationSessionView.swift */,
+				AE1E94C52D4422ED004D40DE /* VideoListView.swift */,
+				AE50937B2D45A5D50084AEC0 /* BreathworkView.swift */,
 				0306BD022D42AE8300D835DE /* Assets.xcassets */,
 				0306BD212D42EF0300D835DE /* icon.jpg */,
 				0306BD1F2D42E69800D835DE /* background.png */,
@@ -99,6 +119,7 @@
 			name = WeMeditate;
 			packageProductDependencies = (
 				0306BD1D2D42E30C00D835DE /* SDWebImageSwiftUI */,
+				AE5093772D457CC00084AEC0 /* YouTubePlayerKit */,
 			);
 			productName = WeMeditate;
 			productReference = 0306BCFB2D42AE8100D835DE /* WeMeditate.app */;
@@ -130,6 +151,7 @@
 			mainGroup = 0306BCF22D42AE8100D835DE;
 			packageReferences = (
 				0306BD1C2D42E30C00D835DE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				AE5093762D457CC00084AEC0 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
 			);
 			productRefGroup = 0306BCFC2D42AE8100D835DE /* Products */;
 			projectDirPath = "";
@@ -159,10 +181,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1E94CF2D444314004D40DE /* ExitView.swift in Sources */,
 				0306BD132D42BD1400D835DE /* MeditationApp.swift in Sources */,
 				0306BD192D42BDC600D835DE /* MeditationSessionView.swift in Sources */,
+				AE50937C2D45A5D50084AEC0 /* BreathworkView.swift in Sources */,
 				0306BD172D42BDB700D835DE /* MeditationSetupView.swift in Sources */,
+				AE1E94C62D4422ED004D40DE /* VideoListView.swift in Sources */,
 				0306BD152D42BD8400D835DE /* WelcomeView.swift in Sources */,
+				AE1E94D12D444314004D40DE /* MeditationPage.swift in Sources */,
+				AE1E94CE2D444314004D40DE /* PureMusicSelectionView.swift in Sources */,
+				AE1E94D02D444314004D40DE /* VideoChoicePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +406,14 @@
 				minimumVersion = 3.1.3;
 			};
 		};
+		AE5093762D457CC00084AEC0 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -385,6 +421,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0306BD1C2D42E30C00D835DE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		AE5093772D457CC00084AEC0 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE5093762D457CC00084AEC0 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
