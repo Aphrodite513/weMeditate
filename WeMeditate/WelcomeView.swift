@@ -13,7 +13,7 @@ struct WelcomeView: View {
         NavigationView {
             ZStack {
                 // background
-                Image("background")                  .resizable()
+                Image("background")
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
