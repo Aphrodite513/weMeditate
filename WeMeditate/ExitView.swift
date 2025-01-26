@@ -1,64 +1,89 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> Video-Interface-Features
-//
-//  ExitView.swift
-//  WeMeditate
-//
-//  Created by 小椰 on 24/1/2025.
-//
-
 import Foundation
-<<<<<<< HEAD
 import SwiftUI
 
 struct ExitView: View {
+    @State private var stars: Int = 0
+    @State private var badges: Int = 0
+    @State private var earnedDiscount: Bool = false
+    @State private var rewardClaimed: Bool = false // New state to track if the reward is claimed
+
     var body: some View {
         NavigationView {
             ZStack {
-                // 背景图片
+                // Background image
                 Image("finishpage")
                     .resizable()
                     .scaledToFill()
-                    .opacity(0.8) // 设置透明度为 50%
-                    .edgesIgnoringSafeArea(.all) // 背景填满整个屏幕
+                    .opacity(0.9)
+                    .edgesIgnoringSafeArea(.all)
                     .offset(x: -30)
-                
+
                 VStack {
-                    // 添加中心顶部的icon
+                    // Icon
                     Image("icon")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 100, height: 100) // 调整icon的大小
-                        .padding(.top, 60) // 顶部间距
-                    
-                    Spacer().frame(height: 20) // icon和标题之间的间距
+                        .frame(width: 190, height: 100)
+                        .padding(.top, 120)
 
-                    // Congratulations message
-                    Text("Congratulations!")
-                        .font(.system(size: 44, weight: .bold))
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 20)
-                    
-                    // Move this text upward
-                    Text("You have completed the practice")
-                        .font(.system(size: 20, weight: .medium))
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .frame(maxWidth: UIScreen.main.bounds.width * 0.8)
-                        .padding(.top, 0) // 减少顶部间距
-                        .padding(.bottom, 10) // 增加与按钮的间距
+                    Spacer().frame(height: 20)
 
-                    Spacer() // 增加空白间距
-                    
-                    // Buttons
+                    // Reward Box
+                    ZStack {
+                        VStack(spacing: 15) {
+                            Text("Congratulations!")
+                                .font(.system(size: 44, weight: .bold))
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+
+                            Text("You have completed the practice")
+                                .font(.system(size: 20, weight: .bold))
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.center)
+
+                            Text("Your Progress")
+                                .font(.system(size: 24, weight: .bold))
+                                .foregroundColor(.white)
+                                .padding(.top, 10)
+
+                            Text("Stars: \(stars)/10")
+                                .font(.system(size: 20, weight: .medium))
+                                .foregroundColor(.white)
+
+                            Text("Badges: \(badges)/5")
+                                .font(.system(size: 20, weight: .medium))
+                                .foregroundColor(.white)
+
+                            if earnedDiscount {
+                                Text("You've earned 10% off from the bookstore! 🎉")
+                                    .font(.system(size: 20, weight: .bold))
+                                    .foregroundColor(.green)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.top, 10)
+                            }
+                        }
+                        .padding()
+                    }
+                    .padding(.horizontal, 20)
+
+                    Spacer()
+
+                    // Claim Button
                     VStack(spacing: 20) {
-                        // Exit Now button
-                
-                        
-                        // Back to Homepage button
+                        Button(action: {
+                            claimReward()
+                        }) {
+                            Text(rewardClaimed ? "Reward Claimed" : "Claim Your Reward")
+                                .font(.system(size: 20, weight: .bold))
+                                .foregroundColor(.white)
+                                .padding(.vertical, 15)
+                                .padding(.horizontal, 50)
+                                .background(rewardClaimed ? Color.gray : Color.blue) // Disable style
+                                .cornerRadius(30)
+                        }
+                        .disabled(rewardClaimed) // Disable button if reward is already claimed
+
+                        // NavigationLink to WelcomeView without back button
                         NavigationLink(destination: WelcomeView().navigationBarBackButtonHidden(true)) {
                             Text("Back to Homepage")
                                 .font(.system(size: 20, weight: .bold))
@@ -69,15 +94,27 @@ struct ExitView: View {
                                 .cornerRadius(30)
                         }
                     }
-                    .padding(.bottom, 300) // 保持底部按钮与屏幕边缘的间距
+                    .padding(.bottom, 50)
                 }
             }
+            .navigationBarBackButtonHidden(true)
         }
+    }
+
+    private func claimReward() {
+        guard !rewardClaimed else { return }
+        stars += 1
+        if stars == 10 {
+            badges += 1
+            stars = 0
+        }
+        if badges == 5 {
+            earnedDiscount = true
+        }
+        rewardClaimed = true // Mark reward as claimed
     }
 }
 
 #Preview {
     ExitView()
 }
-=======
->>>>>>> Video-Interface-Features
