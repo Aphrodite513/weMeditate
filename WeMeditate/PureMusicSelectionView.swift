@@ -1,46 +1,50 @@
-<<<<<<< HEAD
 import Foundation
 import SwiftUI
 import AVFoundation
 
-// Create a class to manage the audio player
+// AudioPlayerManager: Manages the playback of audio tracks
 class AudioPlayerManager: ObservableObject {
-    @Published var playingTrack: String? = nil
-    private var audioPlayer: AVAudioPlayer?
+    @Published var playingTrack: String? = nil // The currently playing track
+    private var audioPlayer: AVAudioPlayer? // AVAudioPlayer instance to handle audio playback
 
+    // Toggle playback of a track: either play or stop the track
     func toggleTrack(_ track: String) {
         if playingTrack == track {
-            // Stop the music
-            audioPlayer?.stop()
-            playingTrack = nil
+            audioPlayer?.stop() // Stop the audio if it's already playing
+            playingTrack = nil // Reset the current track
         } else {
-            // Find the audio file path
+            // Locate the audio file in the app bundle
             guard let url = Bundle.main.url(forResource: track, withExtension: "mp3") else {
-                print("Audio file not found: \(track)")
+                print("Not find file: \(track)") // Handle missing file
                 return
             }
             
             do {
-                // Stop the previous track if it's playing
-                audioPlayer?.stop()
-
-                // Initialize and play the new track
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer?.play()
-                playingTrack = track
+                audioPlayer?.stop() // Stop any currently playing audio
+                audioPlayer = try AVAudioPlayer(contentsOf: url) // Initialize a new audio player
+                audioPlayer?.play() // Start playing the track
+                playingTrack = track // Set the currently playing track
             } catch {
-                print("Failed to play audio: \(error)")
+                print("Failure of playing music: \(error)") // Handle playback error
             }
         }
     }
+
+    // Stop the current track
+    func stopTrack() {
+        audioPlayer?.stop()
+        playingTrack = nil
+    }
 }
 
-// Main view
+// PureMusicSelectionView: The main view for selecting pure music meditation
 struct PureMusicSelectionView: View {
-    @StateObject private var audioManager = AudioPlayerManager()
-    @State private var selectedTime: Int = 0
-    @State private var selectedTrack: String? = nil // Selected track for visual feedback
+    @StateObject private var audioManager = AudioPlayerManager() // Manage audio playback
+    @State private var selectedTime: Int = 0 // The selected meditation time
+    @State private var selectedTrack: String? = nil // The selected music track
+    @State private var navigationPath = NavigationPath() // Navigation state
 
+    // List of music tracks available for preview
     let tracks = [
         "Moonlight",
         "SpringBreeze",
@@ -55,40 +59,42 @@ struct PureMusicSelectionView: View {
     ]
     
     var body: some View {
-        ZStack {
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .opacity(0.5)
+        NavigationStack {
+            ZStack {
+                Image("background") // Background image
+                    .resizable()
+                    .scaledToFill()
+                    .opacity(0.5)
+                    .edgesIgnoringSafeArea(.all)
+                    .offset(x: -30)
+                
+                VStack(spacing: 0) {
+                    header // Header view
+                    timeSelection // Time selection picker
+                    previewMusicTitle // Title for the music preview section
+                    musicList // List of music tracks
+                }
+                .padding(.horizontal, 20)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .edgesIgnoringSafeArea(.all)
-                .offset(x: -30)
-            
-            VStack(spacing: 15) {
-                header
-                timeSelection
-                previewMusicTitle
-                musicList
             }
-            .padding(.horizontal, 20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .edgesIgnoringSafeArea(.all)
         }
     }
 
     // MARK: - Header
     private var header: some View {
-        VStack(spacing: 15) {
+        VStack(spacing: 0) {
             HStack {
-                Image("icon")
+                Image("icon") // App icon
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
-                    .padding(.leading, 5)
+                    .padding(.leading, 170)
                 Spacer()
             }
-            .padding(.top, 30)
+            .padding(.top, 100)
 
-            Text("Pure Music Meditation")
+            Text("Pure Music Meditation") // Title for the meditation view
                 .font(.system(size: 30, weight: .bold))
         }
     }
@@ -96,12 +102,12 @@ struct PureMusicSelectionView: View {
     // MARK: - Time Selection Picker
     private var timeSelection: some View {
         VStack(spacing: 10) {
-            Text("Choose Time")
+            Text("Choose Time") // Label for time selection
                 .font(.system(size: 24, weight: .bold))
             
             Picker("Select Time", selection: $selectedTime) {
                 ForEach(0..<61, id: \.self) { time in
-                    Text("\(time) minutes").tag(time)
+                    Text("\(time) minutes").tag(time) // Display time options from 0 to 60 minutes
                 }
             }
             .pickerStyle(WheelPickerStyle())
@@ -112,7 +118,7 @@ struct PureMusicSelectionView: View {
     
     // MARK: - Preview Music Title
     private var previewMusicTitle: some View {
-        Text("Preview Music")
+        Text("Preview Music") // Title for music preview section
             .font(.system(size: 24, weight: .bold))
             .padding(.top, 0)
     }
@@ -123,15 +129,15 @@ struct PureMusicSelectionView: View {
             VStack(spacing: 0) {
                 ForEach(tracks, id: \.self) { track in
                     HStack {
-                        Text(track)
+                        Text(track) // Display track name
                             .font(.system(size: 16))
+                            .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        // Play/Stop Button
                         Button(action: {
-                            audioManager.toggleTrack(track)
+                            audioManager.toggleTrack(track) // Toggle track playback
                         }) {
-                            Text(audioManager.playingTrack == track ? "Stop" : "Play")
+                            Text(audioManager.playingTrack == track ? "Stop" : "Play") // Play/Stop button
                                 .font(.system(size: 14, weight: .bold))
                                 .padding(.vertical, 6)
                                 .padding(.horizontal, 12)
@@ -142,17 +148,21 @@ struct PureMusicSelectionView: View {
                                 .cornerRadius(6)
                         }
                         
-                        // Start Button
-                        NavigationLink(destination: MeditationPage(meditationType: "Pure Music", time: selectedTime, track: track)) {
-                            Text("Start")
+                        // Navigation to meditation page with selected track and time
+                        NavigationLink(destination: MeditationPage(meditationType: "Pure Music", time: selectedTime, track: track)
+                            .navigationBarBackButtonHidden(true),
+                                       label: {
+                            Text("Start") // Button to start the meditation session
                                 .font(.system(size: 14, weight: .bold))
                                 .padding(.vertical, 6)
                                 .padding(.horizontal, 12)
                                 .background(Color.green)
                                 .foregroundColor(.white)
                                 .cornerRadius(6)
-                        }
-                    }
+                        })
+                        .simultaneousGesture(TapGesture().onEnded {
+                            navigationPath = NavigationPath() // Reset navigation path
+                        })}
                     .padding(.horizontal, 10)
                     .padding(.vertical, 6)
                     .background(
@@ -164,16 +174,10 @@ struct PureMusicSelectionView: View {
         }
     }
 }
-#Preview {
-    PureMusicSelectionView()
-}
-=======
-//
-//  PureMusicSelectionView.swift
-//  WeMeditate
-//
-//  Created by 小椰 on 23/1/2025.
-//
 
-import Foundation
->>>>>>> Video-Interface-Features
+#Preview {
+    PureMusicSelectionView() // Preview of the music selection view
+}
+
+
+
