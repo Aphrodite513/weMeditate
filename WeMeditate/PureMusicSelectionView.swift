@@ -40,7 +40,7 @@ class AudioPlayerManager: ObservableObject {
 // PureMusicSelectionView: The main view for selecting pure music meditation
 struct PureMusicSelectionView: View {
     @StateObject private var audioManager = AudioPlayerManager() // Manage audio playback
-    @State private var selectedTime: Int = 0 // The selected meditation time
+    @State private var selectedTime: Int = 5 // The selected meditation time, default is 5 minutes
     @State private var selectedTrack: String? = nil // The selected music track
     @State private var navigationPath = NavigationPath() // Navigation state
 
@@ -106,8 +106,8 @@ struct PureMusicSelectionView: View {
                 .font(.system(size: 24, weight: .bold))
             
             Picker("Select Time", selection: $selectedTime) {
-                ForEach(0..<61, id: \.self) { time in
-                    Text("\(time) minutes").tag(time) // Display time options from 0 to 60 minutes
+                ForEach(1..<61, id: \.self) { time in
+                    Text("\(time) minutes").tag(time) // Display time options from 1 to 60 minutes
                 }
             }
             .pickerStyle(WheelPickerStyle())
