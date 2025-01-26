@@ -43,7 +43,7 @@ struct WelcomeView: View {
                         .multilineTextAlignment(.center)
                         .padding(.top, 0)
                     
-                    NavigationLink(destination: MeditationSetupView()) {
+                    NavigationLink(destination: MeditationSetupView().navigationBarBackButtonHidden(true)) {
                         Text("Start My Journey")
                             .font(.system(size: 24, weight: .bold))
                             .foregroundColor(.black)
@@ -57,6 +57,7 @@ struct WelcomeView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -64,3 +65,4 @@ struct WelcomeView: View {
 #Preview {
     WelcomeView()
 }
+
