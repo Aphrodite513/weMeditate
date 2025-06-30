@@ -12,7 +12,7 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 
 **Welcome Screen:**
 
-<img src="/welcome.png" alt="Welcome picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/welcome.png" alt="Welcome picture" style="width: 150px; height: auto; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Minimalist design with "Take a Deep Breath" prompt, inviting users to begin their mindfulness journey.
 * Visual: Soft gradient background with a centered "Start My Journey" button.
