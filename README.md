@@ -12,7 +12,7 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 
 **Welcome Screen:**
 
-<img src="/welcome.png" alt="Welcome picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/welcome.png" alt="Welcome picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Minimalist design with "Take a Deep Breath" prompt, inviting users to begin their mindfulness journey.
 * Visual: Soft gradient background with a centered "Start My Journey" button.
@@ -21,7 +21,7 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 
 **Meditation Selection:**
 
-<img src="/selection1.png" alt="Selection1 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/selection1.png" alt="Selection1 picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Choose from Guided, Breath Focus, or Pure Music sessions.
 * Visual: Card-based UI with soothing icons and brief descriptions (e.g., "Step-by-step guidance for calmness").
@@ -30,8 +30,8 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 
 **Duration Filters:**
 
-<img src="/selection2.png" alt="Selection2 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
-<img src="/selection3.png" alt="Selection3 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/selection2.png" alt="Selection2 picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/selection3.png" alt="Selection3 picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Sessions categorized by time (5–10 min, 10–20 min, 20+ min) for quick access.
 * Visual: Horizontal scrollable tabs with session cards featuring nature-inspired thumbnails.
@@ -40,8 +40,8 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 
 **Pure Music Player:**
 
-<img src="/Player1.png" alt="player1 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
-<img src="/Player2.png" alt="player2 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/Player1.png" alt="player1 picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/Player2.png" alt="player2 picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Ambient tracks like Moonlight and Spring Breeze with play/preview options.
 * Visual: Full-screen music player with a waveform animation and time slider.
@@ -50,7 +50,7 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 
 **Achievement Screen:**
 
-<img src="/achievement.png" alt="Profile picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/achievement.png" alt="Profile picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Celebrate progress with a "Congratulations!" message and session counter (e.g., "Class: 0/10").
 * Visual: Confetti animation over a zen-themed backdrop.
