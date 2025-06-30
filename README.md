@@ -1,7 +1,3 @@
-# WeMeditate
-
----
-
 
 # 📱 WeMeditate: Your Serene Escape to Mindfulness
 
