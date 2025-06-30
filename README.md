@@ -1,28 +1,101 @@
 # WeMeditate
 
-## Inspiration
 
-The inspiration behind WeMeditate came from the increasing need for balance in our daily lives as MCIT students. With demanding schedules and constant digital distractions, we noticed many people struggle to prioritize mindfulness and overall wellness.
+---
+title: WeMeditate App
+parent: Projects
+layout: default
+nav_order: 5
+permalink: /software-project/wemeditate/
+---
 
-## What it Does
+# 📱 WeMeditate: Your Serene Escape to Mindfulness
 
-WeMeditate is an iOS app that empowers users to take control of their wellness journey. The app provides guided meditation sessions, allowing users to select a suitable time and meditation type to improve their mental and emotional health. It acts as a daily companion to help users de-stress, stay mindful, and build long-lasting healthy habits.
+A beautifully crafted iOS app designed to guide you through meditation with calming visuals, intuitive controls, and personalized sessions.
 
-## How We Built It
+---
+# 🌿 App Screens & Visual Journey
 
-We developed WeMeditate using Swift and Xcode for the iOS platform. The user interface was designed with SwiftUI to create a clean, modern, and user-friendly experience. We also incorporated animations and transitions to enhance the immersive experience and ensure seamless navigation.
+**Welcome Screen:**
 
-## Challenges We Ran Into
-	•	UI/UX design: Creating an aesthetically calming design while maintaining intuitive navigation.
-	•	Time constraints: Building a polished app in a short timeframe (2 days) required prioritizing tasks effectively.
+<img src="/serenaintech/assets/images/welcome.png" alt="Welcome picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
 
+* Minimalist design with "Take a Deep Breath" prompt, inviting users to begin their mindfulness journey.
+* Visual: Soft gradient background with a centered "Start My Journey" button.
 
-## How to Run the Program
-	1.	Clone this repository to your local machine:
-	2.	Open the project in Xcode.
-	3.	Use the simulator in Xcode.
-	4.	Build and run the app by pressing the Run button or using the shortcut Cmd + R.
+<div style="clear: both;"></div>
 
-# Video Demo
+**Meditation Selection:**
+
+<img src="/serenaintech/assets/images/selection1.png" alt="Selection1 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+
+* Choose from Guided, Breath Focus, or Pure Music sessions.
+* Visual: Card-based UI with soothing icons and brief descriptions (e.g., "Step-by-step guidance for calmness").
+
+<div style="clear: both;"></div>
+
+**Duration Filters:**
+
+<img src="/serenaintech/assets/images/selection2.png" alt="Selection2 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/serenaintech/assets/images/selection3.png" alt="Selection3 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+
+* Sessions categorized by time (5–10 min, 10–20 min, 20+ min) for quick access.
+* Visual: Horizontal scrollable tabs with session cards featuring nature-inspired thumbnails.
+
+<div style="clear: both;"></div>
+
+**Pure Music Player:**
+
+<img src="/serenaintech/assets/images/Player1.png" alt="player1 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/serenaintech/assets/images/Player2.png" alt="player2 picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+
+* Ambient tracks like Moonlight and Spring Breeze with play/preview options.
+* Visual: Full-screen music player with a waveform animation and time slider.
+
+<div style="clear: both;"></div>
+
+**Achievement Screen:**
+
+<img src="/serenaintech/assets/images/achievement.png" alt="Profile picture" style="width: auto; max-height: 150px; float: left; margin: 0 1.5rem 1rem 0;" />
+
+* Celebrate progress with a "Congratulations!" message and session counter (e.g., "Class: 0/10").
+* Visual: Confetti animation over a zen-themed backdrop.
+
+<div style="clear: both;"></div>
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** SwiftUI for dynamic, responsive layouts with smooth transitions.
+- **Animations:** Lottie for celebratory effects (e.g., confetti on completion).
+- **Backend:** Firebase (planned) for future user logins and progress tracking.
+
+---
+
+## ✨ Key Features
+
+- **Guided Meditation Sessions:** Choose from a variety of meditation types and durations to suit your needs.
+- **Daily Companion:** Helps you de-stress, stay mindful, and build long-lasting healthy habits.
+- **Visually Calming Aesthetic:** Designed with a focus on a serene and intuitive user experience.
+
+---
+
+## 🚀 What's Next
+
+We are planning to expand WeMeditate with features like:
+
+- **New Meditation Programs and Daily Challenges**
+- **Wellness Reminders:**  Push notifications for hydration, stretch breaks, and mindfulness prompts.
+- **User Login Functionality:** For personalized experiences and progress tracking.
+
+---
+
+## 🧑‍🤝‍🧑 Community-Driven Growth
+
+Initially, we plan to connect with users within Penn Engineering and then expand to other campuses, fostering a supportive and engaged community around mindfulness.
+
+---
+## 🎥 Demo Video
 
 Check out our video demo/presentation to see WeMeditate in action: [[Video Demo Link](https://www.youtube.com/watch?v=kTgs8VgtaGw)]
