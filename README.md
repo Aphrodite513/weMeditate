@@ -41,7 +41,7 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 **Pure Music Player:**
 
 <img src="/Player1.png" alt="player1 picture" style="width: 150px; height: auto; float: left; margin: 0 1.5rem 1rem 0;" />
-<img src="/Player2.png" alt="player2 picture" style="width: 150px; height: autox; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/Player2.png" alt="player2 picture" style="width: 150px; height: auto; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Ambient tracks like Moonlight and Spring Breeze with play/preview options.
 * Visual: Full-screen music player with a waveform animation and time slider.
@@ -50,7 +50,7 @@ A beautifully crafted iOS app designed to guide you through meditation with calm
 
 **Achievement Screen:**
 
-<img src="/achievement.png" alt="Profile picture" style="width: auto; max-height: 15px; float: left; margin: 0 1.5rem 1rem 0;" />
+<img src="/achievement.png" alt="Profile picture" style="width: 150px; height: autox; float: left; margin: 0 1.5rem 1rem 0;" />
 
 * Celebrate progress with a "Congratulations!" message and session counter (e.g., "Class: 0/10").
 * Visual: Confetti animation over a zen-themed backdrop.
